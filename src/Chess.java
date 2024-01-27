@@ -1,5 +1,3 @@
-import java.awt.datatransfer.Clipboard;
-
 public class Chess {
     private Board board;
     private Player player1, player2;
@@ -24,11 +22,12 @@ public class Chess {
     public void game(){
         Player winner = null;
         boolean checkMate = false, tables = false;
-        while(!checkMate || !tables){
+        Screen.printBoard(board);
+        /*while(!checkMate || !tables){
 
-        }
-        if (tables) screen.msg("The game ends in tables! Good luck next time");
-        else if (checkMate && winner.equals(player1)) screen.msg("Checkmate! Player 1, with whites -"+player1.getName()+"- Wins the game. Congratulations!");
-        else if (checkMate && winner.equals(player2)) screen.msg("Checkmate! Player 2, with blacks -"+player2.getName()+"- Wins the game. Congratulations!");
+        }*/
+        if (tables) Screen.msg("The game ends in tables! Good luck next time");
+        else if (checkMate && winner.equals(player1)) Screen.msg("Checkmate! Player 1, with whites -"+player1.getName()+"- Wins the game. Congratulations!");
+        else if (checkMate && winner.equals(player2)) Screen.msg("Checkmate! Player 2, with blacks -"+player2.getName()+"- Wins the game. Congratulations!");
     }
 }

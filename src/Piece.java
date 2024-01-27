@@ -3,6 +3,7 @@ import java.sql.SQLInvalidAuthorizationSpecException;
 public class Piece {
     private Square square;
     private final int color;
+    private Character character;
 
     public Piece(int color, Square square){
         this.square = square;
@@ -17,5 +18,9 @@ public class Piece {
 
     public void setSquare(Square square) {
         this.square = square;
+    }
+    public Character getChar() {
+        if (color == 0) return '\u2659';
+        else return '\u265F';
     }
 }
