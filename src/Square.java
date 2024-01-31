@@ -12,8 +12,16 @@ public class Square {
     public Piece getPiece(){
         return piece;
     }
+
+    public Integer[] getPosition() {
+        return position;
+    }
+
     public void setPiece(Piece piece){
         this.piece = piece;
     }
 
+    public void empty() {
+        piece = null;
+    }
 }

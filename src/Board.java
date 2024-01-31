@@ -12,9 +12,9 @@ public class Board {
             for (int j = 0; j<8; j++) {
                 squares.get(i).add(new Square(i, j));
                 if (i<2)
-                    squares.get(i).get(j).setPiece(new Piece(0,squares.get(i).get(j)));//todo cambiar para considerar tipos de pieza
+                    squares.get(i).get(j).setPiece(new Pawn(0,squares.get(i).get(j)));//todo cambiar para considerar tipos de pieza
                 if (i>5)
-                    squares.get(i).get(j).setPiece(new Piece(0,squares.get(i).get(j)));
+                    squares.get(i).get(j).setPiece(new Pawn(0,squares.get(i).get(j)));
             }
         }
 
@@ -22,5 +22,8 @@ public class Board {
 
     public ArrayList<ArrayList<Square>> getSquares() {
         return squares;
+    }
+    public Square getSquare(int i, int j){
+        return squares.get(i).get(j);
     }
 }
